@@ -52,7 +52,7 @@
   width: 100%;
   height: 50px;
   padding: 10px;
-  background-color: #007bff;
+  background-color: #236c7e;
   color: white;
   border: none;
   border-radius: 5px;
@@ -61,7 +61,7 @@
 }
 
 .auth-form button:hover {
-  background-color: #0056b3;
+  background-color: #064757;
 }
 
 .auth-form p {
