@@ -1,8 +1,17 @@
 import React from 'react'
 
+import Featured from '../components/Featured'
+import Amenities from '../components/Amenities'
+
 function Home() {
   return (
-    <div>Home</div>
+    <div>
+      
+      <Featured />
+      <Amenities />
+    </div>
+
+
   )
 }
 
