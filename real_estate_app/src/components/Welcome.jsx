@@ -33,7 +33,7 @@ const Welcome = () => {
         {/* Right section: Images */}
         <div className="welcome-images">
           <img
-            src="https://iconiclife.com/wp-content/uploads/2020/05/the-best-resort-pool-at-Ritz-Carlton-Arizona.jpg"
+            src="https://img.pikbest.com/wp/202408/swimming-pool-3d-rendering-of-a-sunset-ocean-view-resort-villa-complete-with-refreshing_9833131.jpg!bw700"
             alt="Resort poolside view"
             className="main-image"
           />
