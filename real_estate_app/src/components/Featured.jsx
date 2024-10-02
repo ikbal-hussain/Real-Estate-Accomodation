@@ -145,7 +145,9 @@ const priceStyle = {
     // fontSize: '1rem',
     // color: '#888',
     fontWeight: "bold",
-    color: "violet"
+    color: "#236c7e", 
+
+    
 };
 
 const descriptionStyle = {
