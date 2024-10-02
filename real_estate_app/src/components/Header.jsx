@@ -1,9 +1,18 @@
-import React from 'react'
+import React from "react";
+import Navbar from "./Navbar";
 
 function Header() {
   return (
-    <div>Header</div>
-  )
+    <div className="header">
+      <Navbar />
+      <div className="intro">
+        <p>Looking for a property !</p>
+        <h1>
+          <span>Buy </span> Properties......
+        </h1>
+      </div>
+    </div>
+  );
 }
 
-export default Header
+export default Header;
