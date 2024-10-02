@@ -1,6 +1,4 @@
 import React from "react";
-
-
 const Amenities = ({ imgPath, amenityName }) => {
   return (
     <div className='amenityCard'>
