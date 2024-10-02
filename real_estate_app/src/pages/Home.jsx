@@ -3,7 +3,8 @@ import Header from '../components/Header';
 
 import Featured from '../components/Featured'
 import Welcome from '../components/Welcome';
-// import Amenities from '../components/Amenities'
+import Amenities from '../components/Amenities'
+import Footer from '../components/Footer';
 
 function Home() {
 
@@ -13,7 +14,8 @@ function Home() {
         <Header/>
         <Welcome/>
       <Featured />
-      {/* <Amenities /> */}
+      <Amenities />
+      <Footer />
     </div>
   )
 }
