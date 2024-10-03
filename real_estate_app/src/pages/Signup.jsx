@@ -3,6 +3,8 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 import { useNavigate } from "react-router-dom";
 import "../styles/auth.css";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -21,7 +23,9 @@ const Signup = () => {
   };
 
   return (
-    <div className="auth-container">
+    <>
+    <Navbar />
+      <div className="auth-container">
       <div className="auth-form">
         <h2>Signup</h2>
         <form onSubmit={handleSignup}>
@@ -55,6 +59,8 @@ const Signup = () => {
         </p>
       </div>
     </div>
+    <Footer />
+    </>
   );
 };
 
