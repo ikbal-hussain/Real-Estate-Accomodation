@@ -101,12 +101,15 @@ const featuredContainerStyle = {
 
 const featuredSpanStyle = {
     // fontSize: '1.2rem',
-    // color: '#555',
+    color: '#236c7e',
+    fontSize: '2rem',
 };
 
 const featuredTitleStyle = {
     fontSize: '2rem',
     margin: '10px 0 20px',
+    color: '#236c7e',
+    // fontWeight: "900"
 };
 
 const cardsContainerStyle = {
@@ -122,8 +125,9 @@ const cardStyle = {
     boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
     overflow: 'hidden',
     transition: 'transform 0.3s',
-    width: '300px',
+    width: '360px',
     cursor: 'pointer',
+    height: "430px"
 };
 
 const imageStyle = {
@@ -142,7 +146,7 @@ const titleStyle = {
 };
 
 const priceStyle = {
-    // fontSize: '1rem',
+    fontSize: '1.25rem',
     // color: '#888',
     fontWeight: "bold",
     color: "#236c7e", 
@@ -152,7 +156,7 @@ const priceStyle = {
 
 const descriptionStyle = {
     fontSize: '0.9rem',
-    color: '#666',
+    // color: '#666',
 };
 
 
