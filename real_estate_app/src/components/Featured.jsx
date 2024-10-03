@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import '../styles/Featured.css'; 
 
-// Sample data
 const sampleData = [
     {
         "Uu_id": 1,
@@ -65,99 +65,85 @@ const sampleData = [
 ];
 
 
-const FeaturedCard = ({ ele }) => {
-    return (
-        <div style={cardStyle}>
-            <img src={ele.photos[0]} alt={ele.title} style={imageStyle} />
-            <div style={textContainerStyle}>
-                <h2 style={titleStyle}>{ele.title}</h2>
-                <p style={priceStyle}>Price: ₹{ele.price}</p>
-                <p style={descriptionStyle}>{ele.description}</p>
-            </div>
-        </div>
-    );
-};
 
+
+const FeaturedCard = ({ ele }) => {
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [isFading, setIsFading] = useState(false);
+  
+    const nextImage = () => {
+      setIsFading(true);
+      setTimeout(() => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % ele.photos.length);
+        setIsFading(false);
+      }, 400); // Adjust this delay to match the CSS transition duration
+    };
+  
+    const prevImage = () => {
+      setIsFading(true);
+      setTimeout(() => {
+        setCurrentImageIndex(
+          (prevIndex) => (prevIndex - 1 + ele.photos.length) % ele.photos.length
+        );
+        setIsFading(false);
+      }, 400);
+    };
+  
+    useEffect(() => {
+      const interval = setInterval(() => {
+        nextImage();
+      }, 3000);
+  
+      return () => clearInterval(interval);
+    }, [currentImageIndex]);
+  
+    return (
+      <div className="card">
+        <div className="image-container">
+          <img
+            src={ele.photos[currentImageIndex]}
+            alt={ele.title}
+            className={`image ${isFading ? 'fade' : ''}`} // Adding fade class during transition
+          />
+          <div className="image-overlay">
+            <button className="prev-button" onClick={prevImage}>
+              &lt;
+            </button>
+            <button className="next-button" onClick={nextImage}>
+              &gt;
+            </button>
+          </div>
+        </div>
+        <div className="text-container">
+          <h2 className="title">{ele.title}</h2>
+          <p className="price">Price: ₹{ele.price}</p>
+          <p className="description">{ele.description}</p>
+          <p className="amenities-title">Amenities:</p>
+          <div className="amenities-buttons">
+            {ele.amenities.map((amenity, index) => (
+              <button key={index} className="amenity-button">
+                {amenity}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  };
+  
 
 const Featured = () => {
-    return (
-        <div style={featuredContainerStyle}>
-            <h1 style={featuredSpanStyle}>Featured</h1>
-            <h1 style={featuredTitleStyle}>Explore Our Most Popular Properties</h1>
-            <div style={cardsContainerStyle}>
-                {sampleData.map((ele) => (
-                    <FeaturedCard key={ele.Uu_id} ele={ele} />
-                ))}
-            </div>
-        </div>
-    );
+  return (
+    <div className="featured-container">
+      <h1 className="featured-span">Featured</h1>
+      <h1 className="featured-title">Explore Our Most Popular Properties</h1>
+      <div className="cards-container">
+        {sampleData.map((ele) => (
+          <FeaturedCard key={ele.Uu_id} ele={ele} />
+        ))}
+      </div>
+    </div>
+  );
 };
-
-
-const featuredContainerStyle = {
-    padding: '20px',
-    textAlign: 'center',
-};
-
-const featuredSpanStyle = {
-    // fontSize: '1.2rem',
-    color: '#236c7e',
-    fontSize: '2rem',
-};
-
-const featuredTitleStyle = {
-    fontSize: '2rem',
-    margin: '10px 0 20px',
-    color: '#236c7e',
-    // fontWeight: "900"
-};
-
-const cardsContainerStyle = {
-    display: 'flex',
-    justifyContent: 'center',
-    gap: '90px',
-    flexWrap: 'wrap',
-};
-
-const cardStyle = {
-    background: '#fff',
-    borderRadius: '8px',
-    boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-    overflow: 'hidden',
-    transition: 'transform 0.3s',
-    width: '360px',
-    cursor: 'pointer',
-    height: "430px"
-};
-
-const imageStyle = {
-    width: '100%',
-    height: '200px',
-    objectFit: 'cover',
-};
-
-const textContainerStyle = {
-    padding: '10px',
-};
-
-const titleStyle = {
-    fontSize: '1.5rem',
-    margin: '5px 0',
-};
-
-const priceStyle = {
-    fontSize: '1.25rem',
-    // color: '#888',
-    fontWeight: "bold",
-    color: "#236c7e", 
-
-    
-};
-
-const descriptionStyle = {
-    fontSize: '0.9rem',
-    // color: '#666',
-};
-
 
 export default Featured;
