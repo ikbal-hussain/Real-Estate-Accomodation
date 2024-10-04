@@ -34,15 +34,15 @@ const AboutUs = () => {
       },
     },
     {
-        name: "Deepak Dhyani",
-        role: "Member",
-        img: "https://media.licdn.com/dms/image/v2/D5635AQHz83vS7iWzfQ/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1722964386189?e=1728554400&v=beta&t=uaXHsu6mbck0Xy87oz0w5hMsvZeksP0ZLoRKcOf2-zs",
-        social: {
-          twitter: "#",
-          facebook: "#",
-          instagram: "#",
-        },
+      name: "Deepak Dhyani",
+      role: "Member",
+      img: "https://media.licdn.com/dms/image/v2/D5635AQHz83vS7iWzfQ/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1722964386189?e=1728554400&v=beta&t=uaXHsu6mbck0Xy87oz0w5hMsvZeksP0ZLoRKcOf2-zs",
+      social: {
+        twitter: "#",
+        facebook: "#",
+        instagram: "#",
       },
+    },
   ];
 
   return (

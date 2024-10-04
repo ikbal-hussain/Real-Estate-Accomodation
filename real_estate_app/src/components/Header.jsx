@@ -2,8 +2,6 @@ import React from "react";
 import Navbar from "./Navbar";
 import Amenities from "./Amenities";
 
-
-
 function Header() {
   return (
     <>
@@ -16,7 +14,6 @@ function Header() {
           </h1>
         </div>
       </div>
-      
     </>
   );
 }

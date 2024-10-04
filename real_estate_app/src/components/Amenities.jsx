@@ -77,6 +77,4 @@ const Amenities = ({ imgPath, amenityName }) => {
   );
 };
 
-
-
 export default Amenities;

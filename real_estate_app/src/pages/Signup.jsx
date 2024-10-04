@@ -24,42 +24,42 @@ const Signup = () => {
 
   return (
     <>
-    <Navbar />
+      <Navbar />
       <div className="auth-container">
-      <div className="auth-form">
-        <h2>Signup</h2>
-        <form onSubmit={handleSignup}>
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              placeholder="Enter your password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div>
-          {error && <p className="error-message">{error}</p>}
-          <button type="submit">Sign Up</button>
-        </form>
-        <p>
-          Already have an account? <a href="/login">Login here</a>
-        </p>
+        <div className="auth-form">
+          <h2>Signup</h2>
+          <form onSubmit={handleSignup}>
+            <div className="form-group">
+              <label htmlFor="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+            </div>
+            {error && <p className="error-message">{error}</p>}
+            <button type="submit">Sign Up</button>
+          </form>
+          <p>
+            Already have an account? <a href="/login">Login here</a>
+          </p>
+        </div>
       </div>
-    </div>
-    <Footer />
+      <Footer />
     </>
   );
 };

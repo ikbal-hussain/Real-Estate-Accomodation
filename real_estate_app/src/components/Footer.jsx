@@ -27,27 +27,45 @@ const Footer = () => {
           <div className="footer-column">
             <h4>Product</h4>
             <ul>
-              <li><a href="#">Rent Property</a></li>
-              <li><a href="#">Advertise</a></li>
-              <li><a href="#">Our agent</a></li>
+              <li>
+                <a href="#">Rent Property</a>
+              </li>
+              <li>
+                <a href="#">Advertise</a>
+              </li>
+              <li>
+                <a href="#">Our agent</a>
+              </li>
             </ul>
           </div>
 
           <div className="footer-column">
             <h4>Company</h4>
             <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact us</a></li>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Contact us</a>
+              </li>
             </ul>
           </div>
 
           <div className="footer-column">
             <h4>Support</h4>
             <ul>
-              <li><a href="#">Getting started</a></li>
-              <li><a href="#">Help center</a></li>
-              <li><a href="#">Report a bug</a></li>
-              <li><a href="#">Chat support</a></li>
+              <li>
+                <a href="#">Getting started</a>
+              </li>
+              <li>
+                <a href="#">Help center</a>
+              </li>
+              <li>
+                <a href="#">Report a bug</a>
+              </li>
+              <li>
+                <a href="#">Chat support</a>
+              </li>
             </ul>
           </div>
 
@@ -62,7 +80,9 @@ const Footer = () => {
       <hr />
       <div className="footer-bottom">
         <p>&copy; PropertyPulse - 2024</p>
-        <p><a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a></p>
+        <p>
+          <a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a>
+        </p>
       </div>
     </footer>
   );
