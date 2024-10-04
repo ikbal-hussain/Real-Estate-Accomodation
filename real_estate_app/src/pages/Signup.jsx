@@ -10,7 +10,7 @@ const Signup = () => {
   const [name, setName] = useState(""); // State for name
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState(""); // State for password
-  const [age, setAge] = useState("");
+  const [phone, setPhone] = useState("");
   const [location, setLocation] = useState("");
   const [role, setRole] = useState(""); // State for role
   const error = useSelector((state) => state.auth.error); // Access error state from Redux
@@ -19,8 +19,8 @@ const Signup = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     dispatch(clearError()); // Clear previous error
-    console.log(email, password, age, location, name, role);
-    const res = await dispatch(registerUser({ email, password, age, location, name, role })).unwrap();
+    console.log(email, password, phone, location, name, role);
+    const res = await dispatch(registerUser({ email, password, phone, location, name, role })).unwrap();
     console.log("res", res);
     if (res.id) navigate('/login');
   };
@@ -53,9 +53,9 @@ const Signup = () => {
       />
       <input
         type="number"
-        placeholder="Age"
-        value={age}
-        onChange={(e) => setAge(e.target.value)}
+        placeholder="phone"
+        value={phone}
+        onChange={(e) => setPhone(e.target.value)}
         required
       />
       <input

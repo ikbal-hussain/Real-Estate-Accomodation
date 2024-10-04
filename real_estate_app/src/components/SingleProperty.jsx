@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProperties } from '../redux/slices/propertySlice'; // Import your Redux action
 import Navbar from './Navbar';
@@ -8,6 +8,7 @@ import '../styles/SingleProperty.css'
 const SingleProperty = () => {
   const { id } = useParams(); 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   // Fetch properties and loading/error states from Redux
   const { properties, loading, error } = useSelector((state) => state.properties);
@@ -17,8 +18,16 @@ const SingleProperty = () => {
       dispatch(fetchProperties()); // Fetch properties if not already loaded
     }
   }, [dispatch, properties.length]);
+  
 
-  // Find the property that matches the ID
+
+  const handleBuyProperty = () =>{
+       window.location.href = 'https://rzp.io/rzp/propertypulse'
+  }
+
+  
+
+
   const property = properties.find((prop) => prop.Uu_id == id);
 
   if (loading) {
@@ -72,6 +81,7 @@ const SingleProperty = () => {
         <p><strong>Contact:</strong> {property.agentEmail}</p>
         <p><strong>Contact:</strong> {property.agentPhone}</p>
       </div>
+      <button className='buyButton' onClick={handleBuyProperty}>Buy Property</button>
     </div>
     </>
   );

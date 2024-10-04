@@ -18,8 +18,8 @@ function Navbar() {
   return (
     <nav>
       <div className="logo">
-        <h1>Property</h1>
-        <h3>Pulse</h3>
+        <h2>Property</h2>
+        <p>Pulse</p>
       </div>
       <label className="menu-icon" htmlFor="menu-btn">
         <span className="nav-icon"></span>

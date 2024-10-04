@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import './App.css'
 import Properties from "./pages/Properties";
 import SingleProperty from "./components/SingleProperty";
+import Thankyou from "./pages/Thankyou";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/Properties" element={<Properties />} />
         <Route path="/properties/:id" element={<SingleProperty />} />
+        <Route path="/Thankyou" element={<Thankyou />} />
       </Routes>
     </Router>
   );
