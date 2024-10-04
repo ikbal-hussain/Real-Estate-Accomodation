@@ -12,9 +12,10 @@
   .search-input, .bhk-filter, .sort-order {
     padding: 10px;
     font-size: 16px;
+    border: 3px solid #226c7d;
+    border-radius: 5px;
   }
   .search-input{
-    border: 1px solid;
     width: 400px;
   }
   
@@ -65,6 +66,15 @@
     border: none;
     border-radius: 5px;
     font-size: 12px;
+  }
+  .title{
+    height: 60px;
+  }
+  /* .price{
+    height: 50px;
+  } */
+  .description{
+    height: 80px;
   }
   
   
