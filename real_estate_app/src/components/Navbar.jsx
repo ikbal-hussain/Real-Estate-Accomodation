@@ -16,7 +16,7 @@ function Navbar() {
           <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <NavLink to="/dispprop">Property</NavLink>
+          <NavLink to="/Properties">Property</NavLink>
         </li>
         <li>
           <NavLink to="/about">About</NavLink>

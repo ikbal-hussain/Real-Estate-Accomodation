@@ -61,7 +61,7 @@ const Amenities = ({ imgPath, amenityName }) => {
 
         <div className="amenitiesCardContainer">
           {amenitiesData.map((amenity, index) => (
-            <div className="amenityCard">
+            <div key={index} className="amenityCard">
               <div className="imgContainer">
                 <img src={amenity.imgPath} alt={amenity.amenityName} />
               </div>
