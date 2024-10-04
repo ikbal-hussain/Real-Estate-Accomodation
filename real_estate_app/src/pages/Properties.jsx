@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Properties.css";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchProperties } from "../redux/slices/propertySlice"; 
+import { fetchProperties } from "../redux/slices/propertySlice";
 import Navbar from "../components/Navbar";
 import { useNavigate } from "react-router-dom";
 
@@ -68,7 +68,9 @@ const PropertyCard = ({ ele }) => {
 
 const Properties = () => {
   const dispatch = useDispatch();
-  const { properties, loading, error } = useSelector((state) => state.properties);
+  const { properties, loading, error } = useSelector(
+    (state) => state.properties
+  );
   const [searchTerm, setSearchTerm] = useState("");
   const [bhkFilter, setBhkFilter] = useState("");
   const [sortOrder, setSortOrder] = useState("");
