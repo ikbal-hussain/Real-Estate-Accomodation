@@ -1,60 +1,84 @@
-import { useState } from "react";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { registerUser, clearError } from "../redux/slices/authSlice"; // Update path as needed
+import '../styles/auth.css'; // Import your CSS file
 import { useNavigate } from "react-router-dom";
-import "../styles/auth.css";
+import Navbar from "../components/Navbar";
 
 const Signup = () => {
+  const dispatch = useDispatch();
+  const [name, setName] = useState(""); // State for name
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [password, setPassword] = useState(""); // State for password
+  const [age, setAge] = useState("");
+  const [location, setLocation] = useState("");
+  const [role, setRole] = useState(""); // State for role
+  const error = useSelector((state) => state.auth.error); // Access error state from Redux
   const navigate = useNavigate();
 
   const handleSignup = async (e) => {
     e.preventDefault();
-    try {
-      await createUserWithEmailAndPassword(auth, email, password);
-      navigate("/login");
-    } catch (err) {
-      setError("Failed to create account.");
-    }
+    dispatch(clearError()); // Clear previous error
+    console.log(email, password, age, location, name, role);
+    const res = await dispatch(registerUser({ email, password, age, location, name, role })).unwrap();
+    console.log("res", res);
+    if (res.id) navigate('/login');
   };
 
   return (
-    <div className="auth-container">
-      <div className="auth-form">
-        <h2>Signup</h2>
-        <form onSubmit={handleSignup}>
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              placeholder="Enter your password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div>
-          {error && <p className="error-message">{error}</p>}
-          <button type="submit">Sign Up</button>
-        </form>
-        <p>
-          Already have an account? <a href="/login">Login here</a>
-        </p>
-      </div>
-    </div>
+    <>
+    <Navbar />
+   
+    <form className="signup-form" onSubmit={handleSignup}>
+      <input
+        type="text"
+        placeholder="Name" // Name input
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        required
+      />
+      <input
+        type="email"
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        required
+      />
+      <input
+        type="password" // Password input
+        placeholder="Password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        required
+      />
+      <input
+        type="number"
+        placeholder="Age"
+        value={age}
+        onChange={(e) => setAge(e.target.value)}
+        required
+      />
+      <input
+        type="text"
+        placeholder="Location"
+        value={location}
+        onChange={(e) => setLocation(e.target.value)}
+        required
+      />
+      <select
+        value={role} // Select for role
+        onChange={(e) => setRole(e.target.value)}
+        required
+      >
+        <option value="" disabled>Select Role</option> {/* Default disabled option */}
+        <option value="propertyOwner">Property Owner</option>
+        <option value="tenant">Tenant</option>
+      </select>
+      {error && <p>{error}</p>}
+      <button type="submit">Sign Up</button>
+    </form>
+
+    </>
   );
 };
 

@@ -33,7 +33,7 @@ const PropertyCard = ({ ele }) => {
   };
 
   return (
-    <div className="card" onClick={handleCardClick}>
+    <div className="property-card" onClick={handleCardClick}>
       <div className="image-container">
         <img
           src={ele.photos[currentImageIndex]}
@@ -50,10 +50,10 @@ const PropertyCard = ({ ele }) => {
         </div>
       </div>
       <div className="text-container">
-        <h2 className="title">{ele.title}</h2>
-        <p className="price">Price: ₹{ele.price}</p>
-        <p className="description">{ele.description}</p>
-        <p className="amenities-title">Amenities:</p>
+        <h2 className="property-title">{ele.title}</h2>
+        <p className="property-price">Price: ₹{ele.price}</p>
+        {/* <p className="description">{ele.description}</p> */}
+        {/* <p className="amenities-title">Amenities:</p> */}
         <div className="amenities-buttons">
           {ele.amenities.map((amenity, index) => (
             <button key={index} className="amenity-button">
@@ -115,7 +115,7 @@ const Properties = () => {
     <>
       <Navbar />
       <div className="properties-container">
-        <h1 className="properties-title">Explore Properties</h1>
+        <h2 className="properties-title">Explore Properties</h2>
 
         <div className="filters-container">
           <input
@@ -149,7 +149,7 @@ const Properties = () => {
           </select>
         </div>
 
-        <div className="cards-container">
+        <div className="properties-cards-container">
           {loading ? (
             <p>Loading properties...</p>
           ) : error ? (

@@ -1,60 +1,49 @@
-import { useState } from "react";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { loginUser, clearError } from "../redux/slices/authSlice"; // Update path as needed
+import '../styles/auth.css'; // Import your CSS file
 import { useNavigate } from "react-router-dom";
-import "../styles/auth.css";
+import Navbar from "../components/Navbar";
 
 const Login = () => {
+  const dispatch = useDispatch();
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [password, setPassword] = useState(""); // State for password
+  const error = useSelector((state) => state.auth.error); // Access error state from Redux
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    try {
-      await signInWithEmailAndPassword(auth, email, password);
-      navigate("/");
-    } catch (err) {
-      setError("Failed to login. Check your credentials.");
+    dispatch(clearError()); // Clear any previous error
+    const res = await dispatch(loginUser({ email, password })).unwrap();
+    if (res?.id) {
+      navigate('/'); // Redirect to home on successful login
     }
   };
 
   return (
-    <div className="auth-container">
-      <div className="auth-form">
-        <h2>Login</h2>
-        <form onSubmit={handleLogin}>
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              placeholder="Enter your password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div>
-          {error && <p className="error-message">{error}</p>}
-          <button type="submit">Login</button>
-        </form>
-        <p>
-          Don't have an account? <a href="/signup">Sign up here</a>
-        </p>
-      </div>
-    </div>
+    <>
+    <Navbar />
+   
+    <form className="login-form" onSubmit={handleLogin}>
+      <input
+        type="email"
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        required
+      />
+      <input
+        type="password" // Password input
+        placeholder="Password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        required
+      />
+      {error && <p>{error}</p>} {/* Display any error */}
+      <button type="submit">Login</button>
+    </form>
+    </>
   );
 };
 
