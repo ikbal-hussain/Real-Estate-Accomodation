@@ -4,6 +4,8 @@ import AddPropertyModal from '../components/AddPropertyModal';
 import '../styles/YourProperties.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProperties } from '../redux/slices/propertySlice'; // Import your fetchProperties action
+// import { deletePropertyFromUser } from '../redux/slices/authSlice';
+
 
 function YourProperties() {
   const dispatch = useDispatch();
@@ -11,16 +13,24 @@ function YourProperties() {
   let yourProperties = useSelector((state) => state.properties.properties);
   console.log("yourProperties:-- ", yourProperties);
   console.log("user:-- ", user, "isAuthenticated", isAuthenticated);
-  yourProperties = yourProperties.filter((ele) => ele.agentEmail === user.email);
+  // yourProperties = yourProperties.filter((ele) => ele.agentEmail == user.email);
+  yourProperties = user.properties
+
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     dispatch(fetchProperties()); // Fetch properties on component mount
-  }, [dispatch]);
+  }, [dispatch, showModal ]);
 
   const handleAddProperty = () => {
     setShowModal(true);
   };
+
+  //   const handleDeleteProperty = (propertyId) => {
+  //   if (window.confirm("Are you sure you want to delete this property?")) {
+  //     dispatch(deletePropertyFromUser({ userId: user.id, propertyId }));
+  //   }
+  // };
 
   const handleCloseModal = () => {
     setShowModal(false);
@@ -53,6 +63,7 @@ function YourProperties() {
                   <span className='prop-amenity-item' key={index}>{amenity}</span>
                 ))}
               </div>
+               {/* <button onClick={() => handleDeleteProperty(property.Uu_id)} className='delete-button'>Delete</button>  */}
             </div>
           ))}
         </div>

@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import "../styles/AddPropertyModal.css"; // Add styles for the wide modal
 import { useDispatch, useSelector } from "react-redux";
 import { addPropertyToUser } from "../redux/slices/authSlice";
-import { addProperty } from "../redux/slices/propertySlice";
-
-
+import { addProperty, fetchProperties } from "../redux/slices/propertySlice"; // Import fetchProperties action to update the properties list
 
 const availableAmenities = [
   "Pool",
@@ -21,30 +19,36 @@ const availableAmenities = [
 
 function AddPropertyModal({ show, handleClose, handleSubmit }) {
   if (!show) return null;
+  
   const { user } = useSelector((state) => state.auth);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+
   // State to manage selected amenities and photos
   const [selectedAmenities, setSelectedAmenities] = useState([]);
   const [photos, setPhotos] = useState(["", "", ""]); // Initialize with three empty strings
+  const [loading, setLoading] = useState(false); // Add loading state to show the submission progress
 
+  // Handle amenity selection
   const handleAmenityChange = (amenity) => {
     setSelectedAmenities((prevSelected) => {
-      if (prevSelected.includes(amenity)) {
-        return prevSelected.filter((item) => item !== amenity);
-      } else {
-        return [...prevSelected, amenity];
-      }
+      return prevSelected.includes(amenity)
+        ? prevSelected.filter((item) => item !== amenity)
+        : [...prevSelected, amenity];
     });
   };
 
+  // Handle photo URL changes
   const handlePhotoChange = (index, value) => {
     const newPhotos = [...photos];
     newPhotos[index] = value;
     setPhotos(newPhotos);
   };
 
-  const handleFormSubmit = (e) => {
+  // Handle form submission
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // Set loading to true when form submission starts
+
     const formData = new FormData(e.target);
     const propertyData = {
       Uu_id: Math.floor(Math.random() * 1000000), // Random unique whole number
@@ -56,14 +60,26 @@ function AddPropertyModal({ show, handleClose, handleSubmit }) {
       photos: photos.filter((photo) => photo.trim() !== ""), // Filter out empty URLs
       agentEmail: user.email,
       agentName: user.name,
-      agentPhone: user.phone
-
+      agentPhone: user.phone,
     };
-    console.log("propertyData:-- ", propertyData);
-    dispatch(addProperty(propertyData))
-    dispatch(addPropertyToUser({ userId: user.id, propertyData }));
 
-    handleSubmit(propertyData); // Pass property data to the parent
+    try {
+      // Dispatch addProperty action to add the new property
+      await dispatch(addProperty(propertyData));
+
+      // Dispatch addPropertyToUser to link the property with the user
+      await dispatch(addPropertyToUser({ userId: user.id, propertyData }));
+
+      // Fetch the updated list of properties (to immediately show the new property)
+      await dispatch(fetchProperties()); // Re-fetch the updated property list
+
+      setLoading(false); // Set loading to false when the submission is done
+      handleSubmit(propertyData); // Call the parent handleSubmit function if needed
+      handleClose(); // Close the modal after the form submission
+    } catch (error) {
+      console.error("Failed to add property:", error);
+      setLoading(false); // Stop loading if an error occurs
+    }
   };
 
   return (
@@ -121,7 +137,10 @@ function AddPropertyModal({ show, handleClose, handleSubmit }) {
             ))}
           </div>
 
-          <button type="submit">Submit</button>
+          {/* Disable submit button when loading */}
+          <button type="submit" disabled={loading}>
+            {loading ? "Submitting..." : "Submit"}
+          </button>
           <button type="button" className="closeButton" onClick={handleClose}>
             Close
           </button>

@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchProperties } from "../redux/slices/propertySlice";
 import Navbar from "../components/Navbar";
 import { useNavigate } from "react-router-dom";
+import { ClipLoader } from "react-spinners";
 
 const PropertyCard = ({ ele }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -153,7 +154,9 @@ const Properties = () => {
 
         <div className="properties-cards-container">
           {loading ? (
-            <p>Loading properties...</p>
+            <div className="loading-container">
+              <ClipLoader color="#236c7d" loading={loading} size={110} />
+            </div>
           ) : error ? (
             <p>Error loading properties: {error}</p>
           ) : filteredProperties.length > 0 ? (
