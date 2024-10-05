@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../redux/slices/authSlice"; // Assuming you have a logout action
@@ -7,9 +7,11 @@ function Navbar() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { isAuthenticated, user } = useSelector((state) => state.auth); // Accessing the authentication state
-  console.log("isAuthenticated:- ", isAuthenticated)
-  console.log("currentUser:- ", user)
-
+  
+   useEffect(() =>{
+    console.log("isAuthenticated:- ", isAuthenticated)
+    console.log("currentUser:- ", user)
+   }, [isAuthenticated, user])
   const handleLogout = () => {
     dispatch(logout()); // Dispatch logout action
     navigate("/login"); // Redirect to login page after logout
@@ -38,6 +40,9 @@ function Navbar() {
             <li>
               <NavLink to="/Properties">Properties</NavLink>
             </li>
+            {user.role == "propertyOwner" && <li>
+              <NavLink to="/YourProperties">Your Properties</NavLink>
+            </li>}
             <li>
               {/* <button onClick={handleLogout} className="logout-btn">Logout</button> */}
               <NavLink to="/login" onClick={handleLogout} className="logout-btn">Logout</NavLink>
@@ -50,6 +55,7 @@ function Navbar() {
             </li>
             <li>
               <NavLink to="/signup">Signup</NavLink>
+            
             </li>
           </>
         )}

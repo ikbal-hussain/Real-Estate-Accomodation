@@ -1,0 +1,79 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-content {
+  margin-top: 20px;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 800px; /* Wider modal */
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+/* Styling for price and description fields */
+input[name="price"] {
+  grid-column: span 2; /* Make the price field span both columns */
+  margin-bottom: 10px; /* Add some space below the price input */
+}
+
+textarea[name="description"] {
+  grid-column: span 2; /* Make the description field span both columns */
+  margin-bottom: 10px; /* Add some space below the description */
+}
+
+.amenities-list {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping if there are too many items */
+  margin: 10px 0;
+}
+
+.amenity-item {
+  margin-right: 15px; /* Space between amenities */
+  color: #236c7d; /* Set color for the amenities text */
+}
+
+/* Additional styling for the modal */
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  margin-top: 10px;
+  background-color: #236c7d; /* Use specified color for buttons */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+button:hover {
+  background-color: #1a5055; /* Darker shade for hover effect */
+}
+form .closeButton {
+  background-color: rgb(231, 0, 0);
+}

@@ -61,8 +61,8 @@
 }
 
 .property-details ul li:hover {
-  background-color: #fed700; /* Change to accent color on hover */
-  color: #236c7d;
+  background-color: #0a7b94; /* Change to accent color on hover */
+ 
 }
 
 /* Property price styling */
@@ -79,8 +79,8 @@
 
 /* Hover effect on price to add interaction */
 .property-details .property-price:hover {
-  background-color: #fed700;
-  color: #236c7d;
+  background-color: #0a6c82;
+  
 }
 
 .buyButton {
@@ -92,7 +92,7 @@
   border-radius: 5px;
 }
 .buyButton:hover {
-  background-color: #236c7d;
+  background-color: #0f7e97;
 }
 .buyButton:active {
   background-color: #236c7d;

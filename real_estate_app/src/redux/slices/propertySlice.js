@@ -1,13 +1,26 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
+// Fetch properties from the API
 export const fetchProperties = createAsyncThunk(
   'properties/fetchProperties',
   async () => {
     const response = await axios.get(
       'https://real-estate-app-d5038-default-rtdb.asia-southeast1.firebasedatabase.app/propertiesData.json'
     );
-    return response.data;
+    return Object.values(response.data);
+  }
+);
+
+// Add a new property to the API
+export const addProperty = createAsyncThunk(
+  'properties/addProperty',
+  async (propertyData) => {
+    const response = await axios.post(
+      'https://real-estate-app-d5038-default-rtdb.asia-southeast1.firebasedatabase.app/propertiesData.json',
+      propertyData
+    );
+    return Object.values(response.data);// Assuming the API returns the created property data
   }
 );
 
@@ -49,11 +62,24 @@ const propertySlice = createSlice({
       .addCase(fetchProperties.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message;
+      })
+      .addCase(addProperty.pending, (state) => {
+        state.loading = true; // Set loading to true when adding a property
+      })
+      .addCase(addProperty.fulfilled, (state, action) => {
+        state.loading = false; // Set loading to false when done
+        state.properties.push(action.payload); // Add the new property to the list
+        state.filteredProperties.push(action.payload); // Update filtered properties if needed
+      })
+      .addCase(addProperty.rejected, (state, action) => {
+        state.loading = false; // Set loading to false if there is an error
+        state.error = action.error.message; // Store error message
       });
   },
 });
 
-export const { filterByPrice, sortByPrice, sortByLocation } =
-  propertySlice.actions;
+// Export the actions
+export const { filterByPrice, sortByPrice, sortByLocation } = propertySlice.actions;
 
+// Export the reducer
 export default propertySlice.reducer;
