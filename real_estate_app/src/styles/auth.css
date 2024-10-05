@@ -1,25 +1,19 @@
 body {
-  /* font-family: 'Arial', sans-serif; */
-  /* background: linear-gradient(135deg, #f3f4f6, #d9e2e9); */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 100vh; */
-  /* margin: 0; */
-
 }
 
 .signup-form {
   background: white;
   border-radius: 8px;
- box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   padding: 13px 30px;
   width: 400px;
   transition: transform 0.3s;
   margin-top: 120px;
   width: 400px;
   border: 2px solid #226c7d;
-  
 }
 
 .signup-form h2 {
@@ -33,11 +27,10 @@ body {
   width: 100%;
   margin: 4px 0;
   padding: 10px 13px;
-  border: 2px solid #226c7d;;
+  border: 2px solid #226c7d;
   border-radius: 5px;
   font-size: 16px;
   transition: border 0.3s;
-  
 }
 
 .signup-form input:focus {
@@ -50,7 +43,7 @@ body {
   width: 100%;
   padding: 15px;
   margin-top: 20px;
-  background: linear-gradient(135deg, #226c7d,  #226c7d);
+  background: linear-gradient(135deg, #226c7d, #226c7d);
   color: white;
   border: none;
   border-radius: 5px;
@@ -60,7 +53,7 @@ body {
 }
 
 .signup-form button:hover {
-  background: linear-gradient(135deg,  #068dac,  #0689a7);
+  background: linear-gradient(135deg, #068dac, #0689a7);
 }
 
 .signup-form p {
@@ -69,16 +62,13 @@ body {
   margin: 10px 0;
 }
 
-
-/* Login below */
-
 .login-form {
   display: flex;
   flex-direction: column;
-  max-width: 400px;  /* Set a max width for the form */
-  margin: 100px auto; /* Center form on the page */
+  max-width: 400px;
+  margin: 100px auto;
   padding: 50px 20px;
-  border: 2px solid #226c7d; /* Border similar to signup form */
+  border: 2px solid #226c7d;
   border-radius: 8px;
   background-color: #f9f9f9;
   width: 400px;
@@ -96,7 +86,7 @@ body {
 }
 
 .login-form input:focus {
-  border-color: #3399cc; /* Change border color when input is focused */
+  border-color: #3399cc;
 }
 
 .login-form button {
@@ -118,13 +108,11 @@ body {
   color: red;
   font-size: 14px;
   margin-bottom: 10px;
-  text-align: center; /* Center error message */
+  text-align: center;
 }
 
-/* Responsive styles */
 @media (max-width: 600px) {
   .login-form {
-    width: 90%;  /* Make the form take up more width on small screens */
+    width: 90%;
   }
 }
-
