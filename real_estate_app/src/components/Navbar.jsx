@@ -31,7 +31,7 @@ function Navbar() {
           <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <NavLink to="/about">About</NavLink>
+          <NavLink to="/aboutUs">About</NavLink>
         </li>
 
        

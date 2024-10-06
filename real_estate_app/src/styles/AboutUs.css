@@ -1,0 +1,150 @@
+/* AboutUs Component Styles */
+
+.aboutUs-section {
+    padding: 50px 0;
+    background-color: #f5f7fa;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .aboutUs-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  .team-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    gap: 30px;
+  }
+  
+  .team-member {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 250px;
+    flex-shrink: 0;
+  }
+  
+  .team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  .team-member h3 {
+    font-size: 1.4rem;
+    color: #222;
+    margin-bottom: 5px;
+  }
+  
+  .team-member h5 {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .social-icons a {
+    color: #333;
+    font-size: 1.4rem;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #1da1f2; /* Twitter color */
+  }
+  
+  .social-icons a:nth-child(2):hover {
+    color: #4267B2; /* Facebook color */
+  }
+  
+  .social-icons a:nth-child(3):hover {
+    color: #E1306C; /* Instagram color */
+  }
+  
+  /* Responsive Design */
+  
+  @media (max-width: 1200px) {
+    .team-grid {
+      justify-content: center;
+      gap: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .aboutUs-title {
+      font-size: 2rem;
+    }
+  
+    .team-member {
+      width: 200px;
+      padding: 15px;
+    }
+  
+    .team-member img {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .team-member h3 {
+      font-size: 1.2rem;
+    }
+  
+    .team-member h5 {
+      font-size: 0.9rem;
+    }
+  
+    .social-icons a {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .aboutUs-title {
+      font-size: 1.8rem;
+    }
+  
+    .team-member {
+      width: 180px;
+    }
+  
+    .team-member img {
+      width: 70px;
+      height: 70px;
+    }
+  
+    .team-member h3 {
+      font-size: 1rem;
+    }
+  
+    .team-member h5 {
+      font-size: 0.8rem;
+    }
+  
+    .social-icons a {
+      font-size: 1rem;
+    }
+  }
+  
