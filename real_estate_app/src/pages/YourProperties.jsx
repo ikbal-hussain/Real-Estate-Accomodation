@@ -11,11 +11,11 @@ function YourProperties() {
   const dispatch = useDispatch();
   const { isAuthenticated, user } = useSelector((state) => state.auth);
   let yourProperties = useSelector((state) => state.properties.properties);
-  console.log("yourProperties:-- ", yourProperties);
-  console.log("user:-- ", user, "isAuthenticated", isAuthenticated);
+  // console.log("yourProperties:-- ", yourProperties);
+  // console.log("user:-- ", user, "isAuthenticated", isAuthenticated);
   // yourProperties = yourProperties.filter((ele) => ele.agentEmail == user.email);
   yourProperties = user.properties
-
+  console.log("yourProperties:- ", yourProperties)
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
@@ -28,6 +28,8 @@ function YourProperties() {
 
   //   const handleDeleteProperty = (propertyId) => {
   //   if (window.confirm("Are you sure you want to delete this property?")) {
+
+  //     console.log("deleting propertyID: ", propertyId, "of user: ", user)
   //     dispatch(deletePropertyFromUser({ userId: user.id, propertyId }));
   //   }
   // };

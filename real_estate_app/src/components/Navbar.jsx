@@ -8,10 +8,10 @@ function Navbar() {
   const navigate = useNavigate();
   const { isAuthenticated, user } = useSelector((state) => state.auth); // Accessing the authentication state
   
-   useEffect(() =>{
-    console.log("isAuthenticated:- ", isAuthenticated)
-    console.log("currentUser:- ", user)
-   }, [isAuthenticated, user])
+  //  useEffect(() =>{
+  //   console.log("isAuthenticated:- ", isAuthenticated)
+  //   console.log("currentUser:- ", user)
+  //  }, [logout])
   const handleLogout = () => {
     dispatch(logout()); // Dispatch logout action
     navigate("/login"); // Redirect to login page after logout
