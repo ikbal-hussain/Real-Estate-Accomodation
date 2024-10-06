@@ -1,129 +1,150 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    /* font-family: "monument"; */
-    text-decoration: none;
+/* AboutUs Component Styles */
+
+.aboutUs-section {
+    padding: 50px 0;
+    background-color: #f5f7fa;
+    font-family: 'Roboto', sans-serif;
   }
   
-  body {
-    /* background-color: #e6d3a3; */
-    margin: 0;
-    padding: 0;
+  .aboutUs-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
   }
   
-  .team {
-    width: 100%;
-    min-height: 100vh;
-    background: #f5f5f5;
+  .team-grid {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    animation: fadeIn 2s ease-in-out;
-    padding-top: 2rem;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    gap: 30px;
   }
   
-  .team-content {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+  .team-member {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-top: 1rem;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 250px;
+    flex-shrink: 0;
   }
   
-  .team-content img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 8px;
+  .team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   }
   
-  .center h1 {
-    color: black;
-    font-size: 3rem;
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
+  .team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
   }
   
-  .box {
-    padding: 16px;
-    background: #0d1010;
-    border-radius: 8px;
-    transition: all 0.38s ease;
-  }
-  
-  .box h3 {
-    font-size: 22px;
-    font-weight: 600;
-    color: #e6d3a3;
+  .team-member h3 {
+    font-size: 1.4rem;
+    color: #222;
     margin-bottom: 5px;
   }
   
-  .box h5 {
-    font-size: 14px;
-    font-weight: 600;
-    color: #91972a;
-    margin-bottom: 8px;
-    letter-spacing: 1px;
+  .team-member h5 {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
   }
   
-  .icons i {
-    display: inline-block;
-    color: #e6d3a3;
-    font-size: 18px;
-    margin: 0 8px;
-    transition: all 0.38s ease;
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
   }
   
-  .icons i:hover {
-    transform: scale(1.2);
+  .social-icons a {
+    color: #333;
+    font-size: 1.4rem;
+    transition: color 0.3s ease;
   }
   
-  .box:hover {
-    animation: hoverEffect 0.5s ease-in-out forwards;
-    cursor: pointer;
+  .social-icons a:hover {
+    color: #1da1f2; /* Twitter color */
   }
   
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  .social-icons a:nth-child(2):hover {
+    color: #4267B2; /* Facebook color */
   }
   
-  @keyframes hoverEffect {
-    0%,
-    100% {
-      transform: scale(1);
-      background: #0d1010;
-    }
-    50% {
-      transform: scale(1.05);
-      background: #191919;
+  .social-icons a:nth-child(3):hover {
+    color: #E1306C; /* Instagram color */
+  }
+  
+  /* Responsive Design */
+  
+  @media (max-width: 1200px) {
+    .team-grid {
+      justify-content: center;
+      gap: 20px;
     }
   }
   
   @media (max-width: 768px) {
-    .team-content {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-  
-    .center h1 {
+    .aboutUs-title {
       font-size: 2rem;
     }
   
-    .box h3 {
-      font-size: 18px;
+    .team-member {
+      width: 200px;
+      padding: 15px;
     }
   
-    .box h5 {
-      font-size: 12px;
+    .team-member img {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .team-member h3 {
+      font-size: 1.2rem;
+    }
+  
+    .team-member h5 {
+      font-size: 0.9rem;
+    }
+  
+    .social-icons a {
+      font-size: 1.2rem;
     }
   }
+  
+  @media (max-width: 480px) {
+    .aboutUs-title {
+      font-size: 1.8rem;
+    }
+  
+    .team-member {
+      width: 180px;
+    }
+  
+    .team-member img {
+      width: 70px;
+      height: 70px;
+    }
+  
+    .team-member h3 {
+      font-size: 1rem;
+    }
+  
+    .team-member h5 {
+      font-size: 0.8rem;
+    }
+  
+    .social-icons a {
+      font-size: 1rem;
+    }
+  }
+  

@@ -6,7 +6,7 @@ const AboutUs = () => {
     {
       name: "Ikbal Hussain",
       role: "Team-Lead",
-      img: "https://ca.slack-edge.com/T07JTBXFQ5B-U07KTHTERMH-2539a83bb815-512",
+      img: "https://media.licdn.com/dms/image/v2/D4D03AQFrJ3M9HVaH0Q/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1707992302151?e=1733961600&v=beta&t=4mQ_aUvueBESDvqVnB9zrrcRjdn7x8yOsvgf3pS_v7Q",
       social: {
         twitter: "#",
         facebook: "#",
@@ -36,7 +36,7 @@ const AboutUs = () => {
     {
         name: "Deepak Dhyani",
         role: "Member",
-        img: "https://media.licdn.com/dms/image/v2/D5635AQHz83vS7iWzfQ/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1722964386189?e=1728554400&v=beta&t=uaXHsu6mbck0Xy87oz0w5hMsvZeksP0ZLoRKcOf2-zs",
+        img: "https://ca.slack-edge.com/T07JTBXFQ5B-U07L01FLRED-009eef407316-512",
         social: {
           twitter: "#",
           facebook: "#",
@@ -46,18 +46,18 @@ const AboutUs = () => {
   ];
 
   return (
-    <section className="team">
+    <section className="aboutUs-section">
       <div className="center">
-        <h1>Our Team</h1>
+        <h1 className="aboutUs-title">Our Team</h1>
       </div>
 
-      <div className="team-content">
+      <div className="team-grid">
         {teamMembers.map((member, index) => (
-          <div className="box" key={index}>
+          <div className="team-member" key={index}>
             <img src={member.img} alt={member.name} />
             <h3>{member.name}</h3>
             <h5>{member.role}</h5>
-            <div className="icons">
+            <div className="social-icons">
               <a href={member.social.twitter}>
                 <i className="ri-twitter-fill"></i>
               </a>
