@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .welcome-section {
+    display: flex;
+    flex-wrap: wrap; /* Allows flexibility for smaller screens */
+    justify-content: space-between;
+    margin-top: 50px;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f5f5f5;
+  }
+  
+  .welcome-text {
+    flex: 1 1 40%; /* Flexibly takes 40% of available space, but can grow/shrink */
+    max-width: 100%;
+    margin-bottom: 2rem; /* Adds spacing for smaller screens */
+  }
+  
+  .welcome-text h1 {
+    font-size: 2.5rem;
+    color: #f4d735;
+  }
+  
+  .welcome-text p {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 1rem 0;
+  }
+  
+  .cta-button {
+    background-color: #236c7e;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #064757;
+  }
+  
+  .welcome-images {
+    flex: 1 1 55%; /* Takes 55% of available space, can adjust on smaller screens */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .main-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  .carousel-container {
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .slick-slide {
+    padding: 0 10px; /* Adds padding around each slide for gap */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+  }
+  
+  .slick-slide img {
+    width: 100%;
+    height: 130px;
+    border-radius: 10px;
+    object-fit: cover; /* Ensures the image fits within the defined height/width */
+  }
+  
+  /* Responsive Design: Adjusting for smaller screens */
+  @media (max-width: 1024px) {
+    .welcome-text h1 {
+      font-size: 2rem;
+    }
+  
+    .welcome-text p {
+      font-size: 1rem;
+    }
+  
+    .cta-button {
+      padding: 0.7rem 1.2rem;
+      font-size: 0.9rem;
+    }
+  
+    .main-image {
+      max-width: 350px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .welcome-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 1.5rem;
+    }
+  
+    .welcome-text {
+      flex: 1 1 100%;
+      margin-bottom: 1rem;
+    }
+  
+    .welcome-images {
+      flex: 1 1 100%;
+    }
+  
+    .main-image {
+      max-width: 300px;
+    }
+  
+    .slick-slide img {
+      height: 120px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .welcome-text h1 {
+      font-size: 1.8rem;
+    }
+  
+    .welcome-text p {
+      font-size: 0.9rem;
+    }
+  
+    .cta-button {
+      padding: 0.6rem 1rem;
+      font-size: 0.85rem;
+    }
+  
+    .main-image {
+      max-width: 250px;
+    }
+  
+    .slick-slide img {
+      height: 100px;
+    }
+  }
+  

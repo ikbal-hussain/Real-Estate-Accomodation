@@ -1,0 +1,99 @@
+/* Container for single property */
+.single-property-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 80px;
+}
+
+/* Images section with hover effect */
+.property-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.property-images img {
+  max-width: 380px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adding transition for zoom */
+}
+
+.property-images img:hover {
+  transform: scale(1.05); /* Zoom in */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+/* Property details section */
+.property-details {
+  margin-top: 20px;
+}
+
+.property-details p {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.property-details h3 {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #226c7d;
+}
+
+.property-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.property-details ul li {
+  background-color: #236c7d;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 5px;
+  width: 160px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  transition: background-color 0.3s ease; /* Adding transition for hover effect */
+}
+
+.property-details ul li:hover {
+  background-color: #0a7b94; /* Change to accent color on hover */
+ 
+}
+
+/* Property price styling */
+.property-details .property-price {
+  background-color: #236c7d;
+  width: 160px;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Hover effect on price to add interaction */
+.property-details .property-price:hover {
+  background-color: #0a6c82;
+  
+}
+
+.buyButton {
+  padding: 15px;
+  background-color:#236c7d;
+  width: 300px;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+}
+.buyButton:hover {
+  background-color: #0f7e97;
+}
+.buyButton:active {
+  background-color: #236c7d;
+}

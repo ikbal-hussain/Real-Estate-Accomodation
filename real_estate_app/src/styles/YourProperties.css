@@ -1,0 +1,91 @@
+/* Main container for your properties */
+.your-props-container {
+  margin-top: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.your-props-container button {
+  padding: 15px;
+  background-color: #236c7d;
+  width: 300px;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.your-props-container button:hover {
+  background-color: #185867;
+  transform: translateY(-2px);
+}
+
+.your-props-container button:active {
+  background-color: #258da4;
+}
+
+/* Add property button */
+.add-props-button {
+  background-color: #236c7d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-props-button:hover {
+  background-color: #1a5055;
+}
+
+/* Properties list section */
+.props-list {
+  padding: 20px;
+}
+
+.props-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Single property card */
+.prop-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s ease;
+}
+
+.prop-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Property image styling */
+.prop-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Amenities section */
+.prop-amenities {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.prop-amenity-item {
+  background-color: #236c7d;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-right: 5px;
+}

@@ -1,0 +1,133 @@
+.featured-container {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  color: #333;
+}
+
+.featured-span {
+  color: #236c7e;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.featured-title {
+  font-size: 1.8rem;
+  margin: 10px 0 30px;
+  color: #444;
+  font-weight: 600;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 380px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.card:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+.card:hover .image {
+  transform: scale(1.1);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  transform: translateY(-50%);
+}
+
+.prev-button,
+.next-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.text-container {
+  padding: 20px;
+}
+
+.title {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: 700;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #236c7e;
+  margin-bottom: 15px;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #666;
+}
+
+.amenities-title {
+  font-size: 1.1rem;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #444;
+}
+
+.amenities-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.amenity-button {
+  background-color: #236c7e;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.amenity-button:hover {
+  background-color: #1a505a;
+}
+
+.fade {
+  opacity: 0.4;
+}

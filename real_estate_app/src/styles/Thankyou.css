@@ -1,0 +1,69 @@
+/* Center the thank you message on the page */
+.thankyou-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f6f9;
+    padding: 20px;
+  }
+  
+  /* Styling the message box */
+  .thankyou-message {
+    background: white;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 500px;
+  }
+  
+  /* Header styling */
+  .thankyou-message h1 {
+    font-size: 32px;
+    color: #226c7d;
+    margin-bottom: 20px;
+  }
+  
+  /* Text content */
+  .thankyou-message p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Button container */
+  .thankyou-actions {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  /* Button styling */
+  .thankyou-actions button {
+    padding: 12px 24px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* View Properties button */
+  .view-properties-btn {
+    background-color: #226c7d;
+  }
+  
+  .view-properties-btn:hover {
+    background-color: #3399cc;
+  }
+  
+  /* Go to Dashboard button */
+  .go-dashboard-btn {
+    background-color: #28a745;
+  }
+  
+  .go-dashboard-btn:hover {
+    background-color: #218838;
+  }
+  

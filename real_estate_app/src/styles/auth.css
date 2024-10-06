@@ -1,0 +1,118 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-form {
+  background: white;
+  border-radius: 8px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  padding: 13px 30px;
+  width: 400px;
+  transition: transform 0.3s;
+  margin-top: 120px;
+  width: 400px;
+  border: 2px solid #226c7d;
+}
+
+.signup-form h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+
+.signup-form>input, select {
+  width: 100%;
+  margin: 4px 0;
+  padding: 10px 13px;
+  border: 2px solid #226c7d;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border 0.3s;
+}
+
+.signup-form input:focus {
+  border-color: #226c7d;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.signup-form button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  background: linear-gradient(135deg, #226c7d, #226c7d);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.signup-form button:hover {
+  background: linear-gradient(135deg, #068dac, #0689a7);
+}
+
+.signup-form p {
+  color: red;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 50px 20px;
+  border: 2px solid #226c7d;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  width: 400px;
+  margin-top: 170px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.login-form input {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #226c7d;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.login-form input:focus {
+  border-color: #3399cc;
+}
+
+.login-form button {
+  padding: 12px;
+  background-color: #226c7d;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+  background-color: #3381a8;
+}
+
+.login-form p {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .login-form {
+    width: 90%;
+  }
+}
