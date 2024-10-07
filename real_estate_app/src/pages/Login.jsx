@@ -26,6 +26,7 @@ const Login = () => {
     <Navbar />
    
     <form className="login-form" onSubmit={handleLogin}>
+    <h1>Property Pulse</h1>
       <input
         type="email"
         placeholder="Email"

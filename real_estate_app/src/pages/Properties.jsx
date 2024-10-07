@@ -72,6 +72,7 @@ const Properties = () => {
   const { properties, loading, error } = useSelector(
     (state) => state.properties
   );
+  const { isAuthenticated, user } = useSelector((state) => state.auth); 
   const [searchTerm, setSearchTerm] = useState("");
   const [bhkFilter, setBhkFilter] = useState("");
   const [sortOrder, setSortOrder] = useState("");
@@ -153,19 +154,20 @@ const Properties = () => {
         </div>
 
         <div className="properties-cards-container">
-          {loading ? (
+          {isAuthenticated && loading ? (
             <div className="loading-container">
               <ClipLoader color="#236c7d" loading={loading} size={110} />
             </div>
           ) : error ? (
             <p>Error loading properties: {error}</p>
-          ) : filteredProperties.length > 0 ? (
+          ) : isAuthenticated && filteredProperties.length > 0 ? (
             filteredProperties.map((ele) => (
               <PropertyCard key={ele.Uu_id} ele={ele} />
             ))
-          ) : (
-            <p>No properties found.</p>
-          )}
+          ) : 
+            isAuthenticated? (<h1>No properties found.</h1>)
+              : <h1>Login to view Properties</h1>
+              }
         </div>
       </div>
     </>
