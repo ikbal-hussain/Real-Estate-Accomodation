@@ -102,9 +102,12 @@ Thanks to these wonderful people who have contributed to this project:
 
 ## Presentation
 
--Youtube - 
+Youtube - https://www.youtube.com/watch?v=IU2ZAzNHKtw
 
--Questionaire - 
+## Questionaire
+
+Youtube - https://www.youtube.com/watch?v=0RtDK81LPMo
+
 
 ## Acknowledgments
 
