@@ -41,7 +41,7 @@ function Navbar() {
               <NavLink to="/Properties">Properties</NavLink>
             </li>
             {user.role == "propertyOwner" && <li>
-              <NavLink to="/YourProperties">Your Properties</NavLink>
+              <NavLink to="/YourProperties">Inventory</NavLink>
             </li>}
             <li>
               {/* <button onClick={handleLogout} className="logout-btn">Logout</button> */}
