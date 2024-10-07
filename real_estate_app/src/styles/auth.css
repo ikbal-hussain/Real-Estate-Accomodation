@@ -115,4 +115,9 @@ body {
   .login-form {
     width: 90%;
   }
+  .signup-form{
+    width: 83%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
