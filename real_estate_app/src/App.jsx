@@ -9,6 +9,7 @@ import SingleProperty from "./components/SingleProperty";
 import Thankyou from "./pages/Thankyou";
 import YourProperties from "./pages/YourProperties";
 import AboutUs from "./pages/AboutUs";
+import AiSuggestions from "./pages/AiSuggestions";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/Thankyou" element={<Thankyou />} />
         <Route path="/YourProperties" element={<YourProperties />} />
         <Route path="/AboutUs" element={<AboutUs />} />
+        <Route path="/aisuggestions" element={<AiSuggestions />} />
       </Routes>
     </Router>
   );

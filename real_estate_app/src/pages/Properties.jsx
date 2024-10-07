@@ -69,9 +69,11 @@ const PropertyCard = ({ ele }) => {
 
 const Properties = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { properties, loading, error } = useSelector(
     (state) => state.properties
   );
+  console.log("properties: ", properties)
   const { isAuthenticated, user } = useSelector((state) => state.auth); 
   const [searchTerm, setSearchTerm] = useState("");
   const [bhkFilter, setBhkFilter] = useState("");
@@ -92,6 +94,10 @@ const Properties = () => {
   const handleSortOrder = (e) => {
     setSortOrder(e.target.value);
   };
+
+  const handleAISuggetionsClick = () =>{
+       navigate('/aisuggestions')
+  }
 
   const filteredProperties = properties
     .filter((property) => {
@@ -119,7 +125,11 @@ const Properties = () => {
     <>
       <Navbar />
       <div className="properties-container">
-        <h2 className="properties-title">Explore Properties</h2>
+        <div className="topmost-bar"> 
+           <span className="properties-title">Explore Properties</span>
+        <span><button onClick={handleAISuggetionsClick}>AI Suggestions</button></span>
+        </div>
+       
 
         <div className="filters-container">
           <input

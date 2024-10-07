@@ -111,6 +111,18 @@ option {
      justify-content: center;
      align-items: center;
 }
+.properties-title{
+  font-size: 23px;
+}
+.topmost-bar{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 15px;
+}
+.topmost-bar button{
+    margin-right: 1px;
+}
 
 /* Base styles (for desktop) remain unchanged */
 
