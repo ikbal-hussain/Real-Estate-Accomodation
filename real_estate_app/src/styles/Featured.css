@@ -1,3 +1,4 @@
+/* Base styles (for desktop) */
 .featured-container {
   padding: 40px 20px;
   background-color: #f9f9f9;
@@ -33,7 +34,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
-  width: 380px;
+  width: 330px;
   cursor: pointer;
   text-align: left;
 }
@@ -130,4 +131,93 @@
 
 .fade {
   opacity: 0.4;
+}
+
+/* Responsive styles for tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+  .featured-span {
+    font-size: 2rem;
+  }
+
+  .featured-title {
+    font-size: 1.6rem;
+    margin: 10px 0 20px;
+  }
+
+  .cards-container {
+    gap: 20px;
+  }
+
+  .card {
+    width: 280px;
+  }
+
+  .image {
+    height: 180px;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .price {
+    font-size: 1.1rem;
+  }
+
+  .amenities-title {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive styles for mobile devices (max-width: 767px) */
+@media (max-width: 767px) {
+  .featured-container {
+    padding: 20px 10px;
+  }
+
+  .featured-span {
+    font-size: 1.8rem;
+  }
+
+  .featured-title {
+    font-size: 1.4rem;
+    margin: 5px 0 20px;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 70%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    width: 300px;
+  }
+
+  .image {
+    height: 160px;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .amenities-title {
+    font-size: 0.9rem;
+  }
+
+  .amenity-button {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
 }

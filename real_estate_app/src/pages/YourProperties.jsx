@@ -42,6 +42,11 @@ function YourProperties() {
     console.log('Property added:', propertyData);
     setShowModal(false);
   };
+  // if(!yourProperties){
+  //   return (
+  //      <div>Added Properties will be shown here</div>
+  //   )
+  // }
 
   return (
     <>
@@ -53,7 +58,7 @@ function YourProperties() {
       <div className='props-list'>
         <h2>Your Added Properties</h2>
         <div className='props-cards'>
-          {yourProperties.map((property) => (
+          {yourProperties && yourProperties.map((property) => (
             <div className='prop-card' key={property.Uu_id}>
               <h3>{property.title}</h3>
               <p>{property.location}</p>
