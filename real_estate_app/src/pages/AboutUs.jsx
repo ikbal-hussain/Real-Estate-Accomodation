@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/AboutUs.css";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const AboutUs = () => {
   const teamMembers = [
@@ -75,6 +76,7 @@ const AboutUs = () => {
         ))}
       </div>
     </section>
+    <Footer />
     </>
     
   );

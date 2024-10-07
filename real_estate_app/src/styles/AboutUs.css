@@ -8,9 +8,9 @@
   
   .aboutUs-title {
     text-align: center;
-    font-size: 2.8rem;
+    font-size: 2.3rem;
     color: #2c3e50;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     font-weight: 700;
@@ -30,7 +30,7 @@
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
-    padding: 30px;
+    padding: 25px 28px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 280px;
     flex-shrink: 0;

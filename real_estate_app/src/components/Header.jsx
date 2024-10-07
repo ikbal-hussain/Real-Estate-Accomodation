@@ -7,15 +7,16 @@ import Amenities from "./Amenities";
 function Header() {
   return (
     <>
-      <div className="header">
-        <Navbar />
+     <Navbar />
+      {/* <div className="header">
+       
         <div className="intro">
           <p>Looking for a property !</p>
           <h1>
             <span>Buy </span> Properties......
           </h1>
         </div>
-      </div>
+      </div> */}
       
     </>
   );

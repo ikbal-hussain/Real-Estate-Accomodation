@@ -2,9 +2,12 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
+    /* font-family: 'Arial', sans-serif; */
   }
   
+  .welcome-container{
+       margin-top: 70px;
+  }
   .welcome-section {
     display: flex;
     flex-wrap: wrap; /* Allows flexibility for smaller screens */
@@ -23,7 +26,7 @@ body {
   
   .welcome-text h1 {
     font-size: 2.5rem;
-    color: #f4d735;
+    color: #236c7d;
   }
   
   .welcome-text p {

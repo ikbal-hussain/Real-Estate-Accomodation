@@ -3,6 +3,9 @@ import "../styles/Welcome.css"; // Importing the CSS file for styling
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 
 const Welcome = () => {
   const settings = {
@@ -14,9 +17,17 @@ const Welcome = () => {
     autoplay: true,
     autoplaySpeed: 3000,
   };
+ 
+  const {isAuthenticated} = useSelector((state) => state.auth)
 
+  const navigate = useNavigate()
+
+
+  const handleGetStarted = () =>{
+       navigate(isAuthenticated? '/properties': '/login') 
+  }
   return (
-    <div className="container">
+    <div className="welcome-container">
       <div className="welcome-section">
         {/* Left section: Text and CTA button */}
         <div className="welcome-text">
@@ -27,7 +38,7 @@ const Welcome = () => {
             or a luxury estate, we make finding the perfect place seamless,
             personalized, and stress-free.
           </p>
-          <button className="cta-button">Get Started</button>
+          <button className="cta-button" onClick={handleGetStarted}>Get Started</button>
         </div>
 
         {/* Right section: Images */}

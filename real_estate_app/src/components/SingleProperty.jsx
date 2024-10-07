@@ -76,10 +76,10 @@ const SingleProperty = () => {
       <div className="property-additional-info">
         {/* <h3>Nearby Facilities</h3> */}
         {/* <p>{property.nearbyFacilities}</p> */}
-        <h3>Agent Details</h3>
+        <h3>Owner Details</h3>
         <p><strong>Name:</strong> {property.agentName}</p>
         <p><strong>Contact:</strong> {property.agentEmail}</p>
-        <p><strong>Contact:</strong> {property.agentPhone}</p>
+        <p><strong>Phone:</strong> {property.agentPhone}</p>
       </div>
       <button className='buyButton' onClick={handleBuyProperty}>Buy Property</button>
     </div>

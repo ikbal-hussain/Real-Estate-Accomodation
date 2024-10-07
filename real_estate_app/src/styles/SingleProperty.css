@@ -19,11 +19,13 @@
   border-radius: 10px;
   object-fit: cover;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adding transition for zoom */
+  overflow: hidden;
 }
 
 .property-images img:hover {
-  transform: scale(1.05); /* Zoom in */
+  transform: scale(1.03); /* Zoom in */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  /* overflow: hidden; */
 }
 
 /* Property details section */

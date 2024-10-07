@@ -131,6 +131,7 @@ function AddPropertyModal({ show, handleClose, handleSubmit }) {
                 key={index}
                 type="text"
                 value={photo}
+                required
                 placeholder={`Photo URL ${index + 1}`}
                 onChange={(e) => handlePhotoChange(index, e.target.value)}
               />
