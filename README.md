@@ -20,17 +20,17 @@ https://property-pulse-app-new.netlify.app/
 
 ### Features of our website.
 
--User Authentication: A secure user authentication system ensuring that only registered users can view detailed property information and contact agents. This feature upholds the privacy and security of both users and property owners.
+- User Authentication: A secure user authentication system ensuring that only registered users can view detailed property information and contact agents. This feature upholds the privacy and security of both users and property owners.
 
--Dynamic Design: A single-page component with responsive layout adjustments to accommodate various screen sizes, ensuring a seamless and user-friendly experience across all devices.
+- Dynamic Design: A single-page component with responsive layout adjustments to accommodate various screen sizes, ensuring a seamless and user-friendly experience across all devices.
 
--Search Functionality: Advanced search capabilities allow users to find properties based on specific keywords such as location, title, or other relevant criteria. This enables users to quickly locate properties that meet their exact requirements.
+- Search Functionality: Advanced search capabilities allow users to find properties based on specific keywords such as location, title, or other relevant criteria. This enables users to quickly locate properties that meet their exact requirements.
 
--Filter Functionality: Comprehensive filtering options enable users to narrow down their property search based on categories (e.g., apartments, villas, PGs) and specific locations within Bangalore. This helps users efficiently find properties that match their preferences.
+- Filter Functionality: Comprehensive filtering options enable users to narrow down their property search based on categories (e.g., apartments, villas, PGs) and specific locations within Bangalore. This helps users efficiently find properties that match their preferences.
 
--Sorting Functionality: Properties can be sorted based on price, allowing users to view listings in either ascending or descending order. This makes it easier for users to find options that fit within their budget.
+- Sorting Functionality: Properties can be sorted based on price, allowing users to view listings in either ascending or descending order. This makes it easier for users to find options that fit within their budget.
 
--Fetching Data: Efficient data retrieval from Firebase ensures that property listings displayed on Property Pulse are always up-to-date and accurate. This integration with Firebase provides a reliable and real-time data source for users.
+- Fetching Data: Efficient data retrieval from Firebase ensures that property listings displayed on Property Pulse are always up-to-date and accurate. This integration with Firebase provides a reliable and real-time data source for users.
 
 
 
@@ -68,27 +68,27 @@ https://property-pulse-app-new.netlify.app/
 
 ## Sign-up Page
 
--Account Creation Required: Users must sign up to create an account before accessing detailed property information and contacting agents on our website.
+- Account Creation Required: Users must sign up to create an account before accessing detailed property information and contacting agents on our website.
 
--Secure Authentication: The sign-up process is secured, ensuring that user information is protected.
+- Secure Authentication: The sign-up process is secured, ensuring that user information is protected.
 
--Unique Email Requirement: Each user must sign up with a unique email ID. The system prevents multiple accounts from being created with the same email.
+- Unique Email Requirement: Each user must sign up with a unique email ID. The system prevents multiple accounts from being created with the same email.
 
--Data Handling: User sign-up details are stored securely, ensuring data privacy and preventing unauthorized access.
+- Data Handling: User sign-up details are stored securely, ensuring data privacy and preventing unauthorized access.
 
 
 
 ## Login Page
 
--Account Access: Users must log in to access detailed property information and contact agents on our website.
+- Account Access: Users must log in to access detailed property information and contact agents on our website.
 
--Secure Authentication: The log-in process is secure, ensuring the protection of user credentials and data privacy.
+- Secure Authentication: The log-in process is secure, ensuring the protection of user credentials and data privacy.
 
--Multiple Sign-In Options: Users can log in using their email and password, or choose to sign in with Google or Facebook for added convenience.
+- Multiple Sign-In Options: Users can log in using their email and password, or choose to sign in with Google or Facebook for added convenience.
 
--Password Recovery: A "Forgot Password?" option is available for users who need to reset their password, ensuring they can regain access to their account quickly.
+- Password Recovery: A "Forgot Password?" option is available for users who need to reset their password, ensuring they can regain access to their account quickly.
 
--User-Friendly Interface: The log-in page is designed to be simple and intuitive, with easy navigation for both returning and new users.
+- User-Friendly Interface: The log-in page is designed to be simple and intuitive, with easy navigation for both returning and new users.
 
 
 
