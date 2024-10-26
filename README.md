@@ -44,13 +44,13 @@ https://property-pulse-app-new.netlify.app/
 - *Tailwind CSS:* JUtility-first CSS framework for quickly designing custom interfaces with minimal, reusable style classes.
 
 ## Design Elements
-1.Streamlined Layout: A user-friendly interface with a well-organized hierarchy of information, designed to improve usability and make navigating the site effortless
+1. Streamlined Layout: A user-friendly interface with a well-organized hierarchy of information, designed to improve usability and make navigating the site effortless
 
-2.Adaptive Design: Delivers a consistent and seamless experience across all devices and screen sizes, from desktops to tablets and smartphones.
+2. Adaptive Design: Delivers a consistent and seamless experience across all devices and screen sizes, from desktops to tablets and smartphones.
 
-3.Enhanced Filtering and Sorting: Powerful search filters and sorting options that enable users to tailor their property search to their specific preferences, allowing them to view listings in the most relevant order.
+3. Enhanced Filtering and Sorting: Powerful search filters and sorting options that enable users to tailor their property search to their specific preferences, allowing them to view listings in the most relevant order.
 
-4.Optimized Data Performance: Advanced data loading techniques ensure fast and efficient performance, providing users with a smooth and responsive browsing experience.
+4. Optimized Data Performance: Advanced data loading techniques ensure fast and efficient performance, providing users with a smooth and responsive browsing experience.
 
 ## Desktop View 1
 
