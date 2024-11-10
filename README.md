@@ -5,7 +5,7 @@
 
 
 ## Introduction
-PropertyPulse is your reliable platform for discovering the ideal home in Bangalore. Our forward-thinking startup provides current listings, certified agents, and an intuitive interface, making your home search smooth and stress-free. With PropertyPulse, finding your dream home has never been easier.
+PropertyPulse is your reliable platform for discovering the ideal home in Bangalore. Our forward-thinking startup provides current listings, certified agents, and an intuitive interface, making your home search smooth and stress-free. With PropertyPulse, finding your dream home has never been easier
 
 ## Project Type
 Fullstack-Web Application
